@@ -66,9 +66,11 @@ class Printer(printer: VstPrinter) {
 				printTypeRef(tref);
 			}
 		}
+
 		if (mdecl.importName != null) {
 			Terminal.put1(" [import \"%s\"]", mdecl.importName.image);
 		}
+
 		if (mdecl.repHints != null) {
 			Terminal.sp();
 			Terminal.put("(");

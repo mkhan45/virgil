@@ -534,6 +534,7 @@ component Parser {
 			if (pt != null) rettype = ReturnType.This(Token.new(p.fileName, str, loc.0, loc.1));
 			else rettype = ReturnType.Explicit(Parser.parseTypeRef(p));
 			rephints = Parser.parseRepHints(p);
+
 			if (p.enableSimpleBodies && (start = p.optN("=>")) >= 0) {
 				var expr = parseExpr(p);
 				if (isDef) p.req1(';');
